@@ -4,11 +4,47 @@
     box-sizing: border-box;
 }
 
-html , body , #root {
+html , body, #root {
     height: 100vh;
 }
 
-body {
-    background-color: white;
+#root {
+    display: flex;
+    flex-direction: column;
 }
+
+.layout-nav {
+    background-color: #c3c6b1;
+}
+
+.nav__title {
+    font-size: 2rem;
+    color: black;
+    font-family: "Special Elite", cursive;
+    text-decoration: none;
+}
+
+.nav__link {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+}
+
+main {
+    flex-grow: 1;
+    padding: 1rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+footer {
+    padding: 0.6rem;
+    background-color: #c3c6b1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 0.8rem;
+    color: #4b553a;
+    text-align: center;
+}
+
+
 
