@@ -1,13 +1,16 @@
 import React from 'react'
+import { Container } from 'react-bootstrap';
 
 import ItemListContainer from "./ItemListContainer";
+import ItemDetailContainer from "./ItemDetailContainer"
 
 
 const Main = () => {
   return (
-    <main>
-        <ItemListContainer />    
-    </main>
+    <Container as="main" fluid>
+        <ItemListContainer />   
+        <ItemDetailContainer /> 
+    </Container>
   )
 }
 

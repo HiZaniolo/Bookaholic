@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import ItemCount from './ItemCount';
+
 import products from '../data/products';
 import ItemList from './ItemList';
 
@@ -23,11 +23,10 @@ function ItemListContainer () {
   
   return (
     <>
-    <h4>Listado de productos</h4>
-      <ItemCount />
+    <h2 className='text-center'>Books To Buy</h2>
       <ItemList items={items} />
     </>
   )
 }
 
-export default ItemListContainer
+export default ItemListContainer;

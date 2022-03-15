@@ -1,116 +1,75 @@
-const products = 
-[{
+const products = [{
   "id": 1,
-  "title": "Aleppo Pine",
+  "title": "The Dark Queens",
   "price": "£7.88",
-  "category": "Violaceae",
-  "imageUrl": "https://unsplash.com/photos/TW2bfT_tWDI",
-  "stock": 15
+  "author":"Shelley Puhak",
+  "description":"The remarkable, little-known story of two trailblazing women in the Early Middle Ages who...",
+  "category": "History",
+  "imageUrl": "/img/1book.jpeg",
+  "stock": 10
 }, {
   "id": 2,
-  "title": "Torrey's Cryptantha",
+  "title": "The Dead Romantics",
   "price": "£11.14",
-  "category": "Boraginaceae",
-  "imageUrl": "#dd74ae",
+  "author":"Ashley Poston ",
+  "description":"A disillusioned millennial ghostwriter who, quite literally, has some ghosts of her own, has to find...",
+  "category": "Romance",
+  "imageUrl": "/img/2book.jpeg",
   "stock": 5
 }, {
   "id": 3,
-  "title": "Engelmann's Fleabane",
+  "title": "The Old Man and the Sea",
   "price": "£15.78",
-  "category": "Asteraceae",
-  "imageUrl": "#47438a",
+  "author":"Ernest Hemingway",
+  "description":"This short novel, already a modern classic, is the superbly told, tragic story of a Cuban fisherman...",
+  "category": "Classic",
+  "imageUrl": "/img/3book.jpeg",
   "stock": 16
 }, {
   "id": 4,
-  "title": "Pilo Kea Lau Li'i",
+  "title": "The Paris Apartment",
   "price": "£10.08",
-  "category": "Rutaceae",
-  "imageUrl": "#bc9677",
+  "author":"Lucy Foley",
+  "description":"From the New York Times bestselling author of The Guest List comes a new locked room mystery...",
+  "category": "Fiction",
+  "imageUrl": "/img/4book.jpeg",
   "stock": 9
 }, {
   "id": 5,
-  "title": "French Sorrel",
+  "title": "Bright Ruined Things",
   "price": "£10.12",
-  "category": "Polygonaceae",
-  "imageUrl": "#06d1fa",
+  "author":"Samantha Cohoe",
+  "description":"The only life Mae has ever known is on the island, living on the charity of the wealthy Prosper...",
+  "category": "Fantasy",
+  "imageUrl": "/img/5book.jpeg",
   "stock": 3
 }, {
   "id": 6,
-  "title": "Tansy Dogshade",
+  "title": "A Life For a Life",
   "price": "£11.34",
-  "category": "Apiaceae",
-  "imageUrl": "#c9d827",
+  "author":"Carol Wyer",
+  "description":"Nobody can get into the mind of an erratic killer—except an unpredictable detective...",
+  "category": "Thriller",
+  "imageUrl": "/img/1book.jpeg",
   "stock": 10
 }, {
   "id": 7,
-  "title": "Morton's Canadian Milkvetch",
-  "price": "£26.41",
-  "category": "Fabaceae",
-  "imageUrl": "#bb5a19",
+  "title": "Last Exit",
+  "price": "£6.41",
+  "author":"Max Gladstone ",
+  "description":"Ten years ago, Zelda led a band of merry adventurers whose knacks let them travel to...",
+  "category": "Science Fiction",
+  "imageUrl": "/img/4book.jpeg",
   "stock": 4
 }, {
   "id": 8,
-  "title": "California Melicgrass",
+  "title": "Messy Roots",
   "price": "£8.89",
-  "category": "Poaceae",
-  "imageUrl": "#b1bcf2",
+  "author":"Laura Gao",
+  "description":"Is a laugh-out-loud, heartfelt, and deeply engaging story of their journey to find themself--as an American...",
+  "category": "Comics",
+  "imageUrl": "/img/3book.jpeg",
   "stock": 9
-}, {
-  "id": 9,
-  "title": "Firethread Sedge",
-  "price": "£28.79",
-  "category": "Cyperaceae",
-  "imageUrl": "#418ec0",
-  "stock": 4
-}, {
-  "id": 10,
-  "title": "Oldplainsman",
-  "price": "£14.42",
-  "category": "Asteraceae",
-  "imageUrl": "#bc1030",
-  "stock": 3
-}, {
-  "id": 11,
-  "title": "Wrinkled Cryptantha",
-  "price": "£7.20",
-  "category": "Boraginaceae",
-  "imageUrl": "#f167f3",
-  "stock": 13
-}, {
-  "id": 12,
-  "title": "Needle's Buckwheat",
-  "price": "£28.14",
-  "category": "Polygonaceae",
-  "imageUrl": "#31af6e",
-  "stock": 9
-}, {
-  "id": 13,
-  "title": "False Yucca",
-  "price": "£13.13",
-  "category": "Agavaceae",
-  "imageUrl": "#bd8695",
-  "stock": 15
-}, {
-  "id": 14,
-  "title": "Upland Cotton",
-  "price": "£16.63",
-  "category": "Malvaceae",
-  "imageUrl": "#d3032c",
-  "stock": 8
-}, {
-  "id": 15,
-  "title": "Aleppo Pine",
-  "price": "£7.04",
-  "category": "Pinaceae",
-  "imageUrl": "#df19df",
-  "stock": 9
-}, {
-  "id": 16,
-  "title": "Wright's Golden Saxifrage",
-  "price": "£10.63",
-  "category": "Saxifragaceae",
-  "imageUrl": "#6ed191",
-  "stock": 16
 }]
 
   export default products;
