@@ -13,7 +13,7 @@ const Item = ({ item }) => {
               <Card.Title>{item.title}</Card.Title>
               <h6>{item.author}</h6>
               <p>Price : {item.price}</p>
-              <Link to={`/book/${item.title}`}>See more</Link>
+              <Link to={`/detail/${item.id}`}>See more</Link>
             </Card.Body>
           </Card>
           </div> 

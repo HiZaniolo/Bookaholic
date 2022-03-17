@@ -5,12 +5,12 @@ const ItemDetail = ({ item }) => {
     <article>
         <img src={item.imageUrl} alt="" />
         <div>
-            <h3>{item.title}</h3>
+            <h2>{item.title}</h2>
             <h5>{item.author}</h5>
             <p>{item.price}</p>
         </div>
         <div>
-            <h6>{item.category}</h6>
+            <h6>Description</h6>
             <p>{item.description}</p>
         </div>
 
@@ -18,4 +18,4 @@ const ItemDetail = ({ item }) => {
   )
 }
 
-export default ItemDetail
+export default ItemDetail;

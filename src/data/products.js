@@ -4,7 +4,7 @@ const products = [{
   "price": "£7.88",
   "author":"Shelley Puhak",
   "description":"The remarkable, little-known story of two trailblazing women in the Early Middle Ages who...",
-  "category": "History",
+  "category": "englishBooks",
   "imageUrl": "/img/1book.jpeg",
   "stock": 10
 }, {
@@ -13,7 +13,7 @@ const products = [{
   "price": "£11.14",
   "author":"Ashley Poston ",
   "description":"A disillusioned millennial ghostwriter who, quite literally, has some ghosts of her own, has to find...",
-  "category": "Romance",
+  "category": "spanishBooks",
   "imageUrl": "/img/2book.jpeg",
   "stock": 5
 }, {
@@ -22,7 +22,7 @@ const products = [{
   "price": "£15.78",
   "author":"Ernest Hemingway",
   "description":"This short novel, already a modern classic, is the superbly told, tragic story of a Cuban fisherman...",
-  "category": "Classic",
+  "category": "englishBooks",
   "imageUrl": "/img/3book.jpeg",
   "stock": 16
 }, {
@@ -31,7 +31,7 @@ const products = [{
   "price": "£10.08",
   "author":"Lucy Foley",
   "description":"From the New York Times bestselling author of The Guest List comes a new locked room mystery...",
-  "category": "Fiction",
+  "category": "spanishBooks",
   "imageUrl": "/img/4book.jpeg",
   "stock": 9
 }, {
@@ -40,7 +40,7 @@ const products = [{
   "price": "£10.12",
   "author":"Samantha Cohoe",
   "description":"The only life Mae has ever known is on the island, living on the charity of the wealthy Prosper...",
-  "category": "Fantasy",
+  "category": "englishBooks",
   "imageUrl": "/img/5book.jpeg",
   "stock": 3
 }, {
@@ -49,7 +49,7 @@ const products = [{
   "price": "£11.34",
   "author":"Carol Wyer",
   "description":"Nobody can get into the mind of an erratic killer—except an unpredictable detective...",
-  "category": "Thriller",
+  "category": "englishBooks",
   "imageUrl": "/img/1book.jpeg",
   "stock": 10
 }, {
@@ -58,7 +58,7 @@ const products = [{
   "price": "£6.41",
   "author":"Max Gladstone ",
   "description":"Ten years ago, Zelda led a band of merry adventurers whose knacks let them travel to...",
-  "category": "Science Fiction",
+  "category": "spanishBooks",
   "imageUrl": "/img/4book.jpeg",
   "stock": 4
 }, {
@@ -67,7 +67,7 @@ const products = [{
   "price": "£8.89",
   "author":"Laura Gao",
   "description":"Is a laugh-out-loud, heartfelt, and deeply engaging story of their journey to find themself--as an American...",
-  "category": "Comics",
+  "category": "spanishBooks",
   "imageUrl": "/img/3book.jpeg",
   "stock": 9
 }]

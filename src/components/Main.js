@@ -10,8 +10,12 @@ import CartWidget from './CartWidget';
 const Main = () => {
   return (
     <Container as="main" fluid>
-      <ItemListContainer />   
-      <ItemDetailContainer /> 
+        <Routes > 
+        <Route path='/' element={<ItemListContainer />} />
+        <Route path='/category/:idCategory' element={<ItemListContainer />} />
+        <Route path='/detail/:id' element={<ItemDetailContainer />} />
+        <Route path='/basket' element={<CartWidget/>} />
+        </ Routes> 
     </Container>
   );
 }

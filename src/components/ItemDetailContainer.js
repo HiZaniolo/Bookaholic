@@ -5,23 +5,38 @@ import products from '../data/products';
 import ItemDetail from './ItemDetail';
 
 
-function getDatos() {
-  return new Promise((resolve) => {
-    setTimeout(function(){
-      resolve(products);
-    }, 2000);
+const getDatos = (id) => {
+  return new Promise((resolve, reject) => {
+    const item = products.find((prod) => prod.id === parseInt(id));
+    setTimeout(() => {
+      resolve(item);
+    }, 1000);
   });
-}
+};
 
-function ItemDetailContainer () {
+const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
+  const [loading, setLoading] = useState(true);
+  const { id } = useParams();
 
   useEffect(() => {
-    getDatos()
-    .then(rtaPromise => setItem(rtaPromise [0]))
-  }, []);
+    setLoading(true);
+    getDatos(id)
+    .then((rtaPromise) => {
+      setItem(rtaPromise);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+    .finally(() => {
+      setLoading(false);
+    });
 
-  
+    return () => {
+      setItem({});
+    };
+  }, [id]);
+
   return (
     <>
     <h2 className='text-center'>Book Details</h2>

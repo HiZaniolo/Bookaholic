@@ -5,32 +5,45 @@ import { useParams } from 'react-router-dom';
 import products from '../data/products';
 import ItemList from './ItemList';
 
-function getDatos() {
-  return new Promise((resolve) => {
-    setTimeout(function(){
-      resolve(products);
+const getDatos = (id) => {
+  return new Promise((resolve, reject) =>{
+    const itemsFilter = products. filter((prod) => prod.category === id);
+    setTimeout(() => {
+      id ? resolve(itemsFilter) : resolve (products);
     }, 2000);
   });
-}
+};
 
-function ItemListContainer () {
+const ItemListContainer = () => {
   const [items, setItems] = useState([]);
-  useParams()
-
-
+  const [loading, setLoading] = useState(true);
+  const {idCategory} = useParams();
 
   useEffect(() => {
-    getDatos()
-    .then(rtaPromise => setItems(rtaPromise))
-  }, []);
+    setLoading(true);
+    getDatos(idCategory)
+    .then((rtaPromise) => {
+      setItems(rtaPromise);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+    .finally(() => {
+      setLoading(false);
+    });
 
-  
+    return () => {
+      setItems([]);
+    };
+  }, [idCategory]);
+
+
   return (
     <>
     <h2 className='text-center'>Books To Buy</h2>
       <ItemList items={items} />
     </>
-  )
+  );
 }
 
 export default ItemListContainer;
