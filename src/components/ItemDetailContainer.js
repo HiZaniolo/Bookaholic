@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom';
 
 import products from '../data/products';
 import ItemDetail from './ItemDetail';
-
 
 
 function getDatos() {
@@ -18,7 +18,7 @@ function ItemDetailContainer () {
 
   useEffect(() => {
     getDatos()
-    .then(rtaPromise => setItem(rtaPromise))
+    .then(rtaPromise => setItem(rtaPromise [0]))
   }, []);
 
   

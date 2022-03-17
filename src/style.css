@@ -27,8 +27,13 @@ html , body, #root {
 .nav__link {
     margin-right: 10px;
     margin-left: 10px;
-    color: black;
+    color: #4b553a;
     font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+
+.nav__link:hover{
+    color: black;
 }
 
 main {
@@ -57,7 +62,11 @@ footer {
     grid-gap: 1rem;
 }
 .cardProducts {
+    width: 11rem;
+    height:30rem;
     padding: 0.5rem;
+    margin-top: 2rem;
+    align-items: center;
     background-color: #ffffff;
     border-radius: 3px;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
@@ -65,7 +74,14 @@ footer {
     cursor: pointer;
     object-fit: cover;
 }
-.cardProducts:hover {
+
+
+.cardImg {
+    width: 8rem;
+    height: 12rem;
+    align-items: center;
+}
+.cardImg:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.1);
 }

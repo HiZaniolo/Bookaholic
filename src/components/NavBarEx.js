@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Navbar, Nav, Container } from 'react-bootstrap'
-
+import { Link } from 'react-router-dom'
 import CartWidget from './CartWidget'
 
 const NavBarEx = () => {
@@ -9,13 +9,13 @@ const NavBarEx = () => {
     <>
     <Navbar className='layout-nav' expand="lg">
     <Container>
-        <Navbar.Brand className='nav__title' href="#home">Greenlosophy</Navbar.Brand>
+        <Link to="/"className='nav__title' href="#home">Bookaholic</Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="navbar-nav m-auto my-2 mb-lg-0">
-          <Nav.Link className='nav__link' href="#home">Home</Nav.Link>
-          <Nav.Link className='nav__link' href="#link">Plants</Nav.Link>
-          <Nav.Link className='nav__link' href="#link"><CartWidget/></Nav.Link>
+          <Link to="/category/englishBooks" className='nav__link'>English Books</Link>
+          <Link to="/category/spanishBooks" className='nav__link'>Spanish Books</Link>
+          <Link to="/basket" className='nav__link'><CartWidget/></Link>
         </Nav>
         </Navbar.Collapse>
     </Container>

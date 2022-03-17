@@ -1,18 +1,19 @@
 import React from 'react'
 
 import { Card, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 
 const Item = ({ item }) => {
   return (
     <section className='cardProducts'>
-          <div className='cardBook col-lg-3 text-center'>
-          <Card style={{ width: '14rem' }}>
-            <Card.Img variant="top" src={item.imageUrl} />
+          <div className='cardBook text-center'>
+          <Card style={{ width: '10rem', height:'14rem'}}>
+            <Card.Img className='cardImg' style={{width: '10rem', height:'14rem'}} variant="top" src={item.imageUrl} />
             <Card.Body>
               <Card.Title>{item.title}</Card.Title>
               <h6>{item.author}</h6>
               <p>Price : {item.price}</p>
-            <Button variant="primary">Buy!</Button>
+              <Link to={`/book/${item.title}`}>See more</Link>
             </Card.Body>
           </Card>
           </div> 

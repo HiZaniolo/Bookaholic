@@ -4,17 +4,20 @@ import Main from "./components/Main"
 import Footer from "./components/Footer"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { BrowserRouter } from "react-router-dom";
 
 
 
 const App = () => {
     return (
-    <>
-        <NavBarEx />
-        <Main />
-        <Footer />
-    </>
+        <BrowserRouter>
+            <NavBarEx />
+            <Main />
+            <Footer />
+            <ToastContainer />
+        </BrowserRouter>
     )
 }
 

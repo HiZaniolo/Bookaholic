@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 
 
 import products from '../data/products';
@@ -14,6 +15,9 @@ function getDatos() {
 
 function ItemListContainer () {
   const [items, setItems] = useState([]);
+  useParams()
+
+
 
   useEffect(() => {
     getDatos()
