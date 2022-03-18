@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-
+import { Spinner } from 'react-bootstrap';
 
 import products from '../data/products';
 import ItemList from './ItemList';
@@ -10,7 +10,7 @@ const getDatos = (id) => {
     const itemsFilter = products. filter((prod) => prod.category === id);
     setTimeout(() => {
       id ? resolve(itemsFilter) : resolve (products);
-    }, 2000);
+    }, 1600);
   });
 };
 
@@ -41,7 +41,7 @@ const ItemListContainer = () => {
   return (
     <>
     <h2 className='text-center'>Books To Buy</h2>
-      <ItemList items={items} />
+    {loading ? <Spinner className='spinner' animation="border" /> : <ItemList items={items} />}
     </>
   );
 }
