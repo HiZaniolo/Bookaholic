@@ -7,18 +7,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter } from "react-router-dom";
+import { MyContextProvider } from "./context/CartContext";
 
 
 
 const App = () => {
     return (
-        <BrowserRouter>
-            <NavBarEx />
-            <Main />
-            <Footer />
-            <ToastContainer />
-        </BrowserRouter>
+        <MyContextProvider>
+            <BrowserRouter>
+                <NavBarEx />
+                <Main />
+                <Footer />
+                <ToastContainer />
+            </BrowserRouter>
+        </MyContextProvider>
     )
 }
 
-export default App
+export default App;

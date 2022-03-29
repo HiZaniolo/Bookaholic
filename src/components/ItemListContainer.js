@@ -7,7 +7,7 @@ import ItemList from './ItemList';
 
 const getDatos = (id) => {
   return new Promise((resolve, reject) =>{
-    const itemsFilter = products. filter((prod) => prod.category === id);
+    const itemsFilter = products.filter((prod) => prod.category === id);
     setTimeout(() => {
       id ? resolve(itemsFilter) : resolve (products);
     }, 1600);

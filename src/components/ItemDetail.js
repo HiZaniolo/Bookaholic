@@ -1,16 +1,19 @@
-import React,{ useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import React,{ useContext, useState } from 'react'
+import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
+import { MyContext } from '../context/CartContext';
 
 const ItemDetail = ({ item }) => {
 const [quantity, setQuantity] = useState(0);
-let navigate = useNavigate();
+
+const {addItem} = useContext(MyContext);
+
+
 
 const onAdd = (quantity) => {
   setQuantity(quantity);
-  setTimeout(() => {
-    navigate('/basket');
-  }, 1500);
+  addItem(item, quantity);
+  
 };
 
   return (
@@ -20,12 +23,19 @@ const onAdd = (quantity) => {
             <h2>{item.title}</h2>
             <h5>{item.author}</h5>
             <p>{item.price}</p>
+            {quantity === 0 ? (
+              <ItemCount stock={item.stock} onAdd={onAdd} />
+            ) : (
+              <Link to="/cart">See the basket</Link>
+            )}
         </div>
         <div>
             <h6>Description</h6>
             <p>{item.description}</p>
         </div>
-        <ItemCount stock={item.stock} onAdd={onAdd} />
+        
+
+
 
     </article>
   )

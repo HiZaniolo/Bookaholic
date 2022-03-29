@@ -40,7 +40,7 @@ const ItemDetailContainer = () => {
 
   return (
     <>
-    <h2 className='text-center'>Book Details</h2>
+    
     {loading ? <Spinner className='spinner' animation="border" /> : <ItemDetail item={item} />}
     </>
   )

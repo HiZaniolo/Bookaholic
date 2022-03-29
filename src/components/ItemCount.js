@@ -57,7 +57,7 @@ const ItemCount = ({onAdd}) => {
                 <Button onClick={substract} variant="danger" className='card_btn'>-</Button>
                 <Button onClick={add} variant="success" className='card_btn' >+</Button>
                 <div>
-                <Button onClick={handleAdd} disabled={number === 0} className='card_btn1' >Add</Button>
+                <Button onClick={handleAdd} disabled={number === 0} className='card_btn1' >Add to basket</Button>
                 </div>
             </Card.Body>
         </Card>
