@@ -5,6 +5,12 @@ import { Spinner } from 'react-bootstrap';
 import products from '../data/products';
 import ItemList from './ItemList';
 
+import { dataBase } from '../firebase';
+import { collection, getDocs } from 'firebase/firestore';
+import { toast } from 'react-toastify';
+
+
+
 const getDatos = (id) => {
   return new Promise((resolve, reject) =>{
     const itemsFilter = products.filter((prod) => prod.category === id);
@@ -20,6 +26,27 @@ const ItemListContainer = () => {
   const {idCategory} = useParams();
 
   useEffect(() => {
+
+    const productsCollection = collection(dataBase,"products")
+    const pedidoDb = getDocs(productsCollection)
+
+    pedidoDb
+        .then((result)=>{
+            const arrayResults = result.docs.map((doc) =>{
+              return doc.data()
+            })
+            setItems(arrayResults)
+            setLoading(false)
+
+            console.log(arrayResults)
+        })
+        .catch(()=>{
+          toast.error("Something went wrong")
+        });
+
+    
+
+
     setLoading(true);
     getDatos(idCategory)
     .then((rtaPromise) => {

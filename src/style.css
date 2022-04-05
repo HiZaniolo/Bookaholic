@@ -20,7 +20,7 @@ html , body, #root {
 .nav__title {
     font-size: 2rem;
     color: black;
-    font-family: "Special Elite", cursive;
+    font-family: 'Share Tech Mono', monospace;
     text-decoration: none;
 }
 
@@ -68,8 +68,8 @@ footer {
     margin-top: 2rem;
     align-items: center;
     background-color: #ffffff;
-    border-radius: 3px;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    /* border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3); */
     transition: all 0.4 ease;
     cursor: pointer;
     object-fit: cover;

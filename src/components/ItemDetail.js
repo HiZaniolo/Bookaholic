@@ -1,6 +1,8 @@
 import React,{ useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
+import Rate from 'rc-rate';
+import 'rc-rate/assets/index.css';
 import { MyContext } from '../context/CartContext';
 
 const ItemDetail = ({ item }) => {
@@ -22,6 +24,7 @@ const onAdd = (quantity) => {
         <div>
             <h2>{item.title}</h2>
             <h5>{item.author}</h5>
+            <Rate allowHalf count={5} value ={item.rating?.rate}/>
             <p>{item.price}</p>
             {quantity === 0 ? (
               <ItemCount stock={item.stock} onAdd={onAdd} />

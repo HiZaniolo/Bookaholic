@@ -6,7 +6,11 @@ const products = [{
   "description":"The remarkable, little-known story of two trailblazing women in the Early Middle Ages who...",
   "category": "englishBooks",
   "imageUrl": "/img/1book.jpeg",
-  "stock": 10
+  "stock": 10,
+  "rating": {
+    "rate": 5.2,
+    "count": 127
+  }
 }, {
   "id": 2,
   "title": "Cien años de soledad",
@@ -15,7 +19,11 @@ const products = [{
   "description":"A disillusioned millennial ghostwriter who, quite literally, has some ghosts of her own, has to find...",
   "category": "spanishBooks",
   "imageUrl": "/img/2book.jpeg",
-  "stock": 5
+  "stock": 34,
+  "rating": {
+    "rate": 4.9,
+    "count": 86
+  }
 }, {
   "id": 3,
   "title": "The Old Man and the Sea",
@@ -24,7 +32,11 @@ const products = [{
   "description":"This short novel, already a modern classic, is the superbly told, tragic story of a Cuban fisherman...",
   "category": "englishBooks",
   "imageUrl": "/img/3book.jpeg",
-  "stock": 16
+  "stock": 16,
+  "rating": {
+    "rate": 6.3,
+    "count": 58
+  }
 }, {
   "id": 4,
   "title": "Las Malas",
@@ -33,7 +45,11 @@ const products = [{
   "description":"From the New York Times bestselling author of The Guest List comes a new locked room mystery...",
   "category": "spanishBooks",
   "imageUrl": "/img/4book.jpeg",
-  "stock": 9
+  "stock": 9,
+  "rating": {
+    "rate": 9.5,
+    "count": 170
+  }
 }, {
   "id": 5,
   "title": "Bright Ruined Things",
@@ -42,7 +58,11 @@ const products = [{
   "description":"The only life Mae has ever known is on the island, living on the charity of the wealthy Prosper...",
   "category": "englishBooks",
   "imageUrl": "/img/5book.jpeg",
-  "stock": 3
+  "stock": 3,
+  "rating": {
+    "rate": 7.1,
+    "count": 56
+  }
 }, {
   "id": 6,
   "title": "A Life For a Life",
@@ -51,7 +71,11 @@ const products = [{
   "description":"Nobody can get into the mind of an erratic killer—except an unpredictable detective...",
   "category": "englishBooks",
   "imageUrl": "/img/1book.jpeg",
-  "stock": 10
+  "stock": 10,
+  "rating": {
+    "rate": 3.9,
+    "count": 140
+  } 
 }, {
   "id": 7,
   "title": "Tenemos que hablar de Kevin",
@@ -60,7 +84,11 @@ const products = [{
   "description":"Ten years ago, Zelda led a band of merry adventurers whose knacks let them travel to...",
   "category": "spanishBooks",
   "imageUrl": "/img/4book.jpeg",
-  "stock": 4
+  "stock": 4,
+  "rating": {
+    "rate": 5.6,
+    "count": 90
+  }
 }, {
   "id": 8,
   "title": "Las Primas",
@@ -69,7 +97,11 @@ const products = [{
   "description":"Is a laugh-out-loud, heartfelt, and deeply engaging story of their journey to find themself--as an American...",
   "category": "spanishBooks",
   "imageUrl": "/img/3book.jpeg",
-  "stock": 9
+  "stock": 9,
+  "rating": {
+    "rate": 7.3,
+    "count": 115
+  }
 }]
 
   export default products;
