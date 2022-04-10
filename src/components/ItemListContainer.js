@@ -6,19 +6,19 @@ import products from '../data/products';
 import ItemList from './ItemList';
 
 import { dataBase } from '../firebase';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 import { toast } from 'react-toastify';
 
 
 
-const getDatos = (id) => {
-  return new Promise((resolve, reject) =>{
-    const itemsFilter = products.filter((prod) => prod.category === id);
-    setTimeout(() => {
-      id ? resolve(itemsFilter) : resolve (products);
-    }, 1600);
-  });
-};
+// const getDatos = (id) => {
+//   return new Promise((resolve, reject) =>{
+//     const itemsFilter = products.filter((prod) => prod.category === id);
+//     setTimeout(() => {
+//       id ? resolve(itemsFilter) : resolve (products);
+//     }, 1600);
+//   });
+// };
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -27,41 +27,77 @@ const ItemListContainer = () => {
 
   useEffect(() => {
 
+    if(!idCategory){
+
     const productsCollection = collection(dataBase,"products")
     const pedidoDb = getDocs(productsCollection)
 
     pedidoDb
-        .then((result)=>{
-            const arrayResults = result.docs.map((doc) =>{
-              return doc.data()
-            })
-            setItems(arrayResults)
-            setLoading(false)
-
-            console.log(arrayResults)
+        .then((result) => {
+          setItems(result.docs.map((doc) => {
+            return doc.data()
+          }))
         })
         .catch(()=>{
           toast.error("Something went wrong")
-        });
+        })
+        .finally(() => {
+          setLoading(false);
+        })
+      }else{
+        
+        const productsCollection = collection(dataBase,"products")
+        const filter = query(productsCollection,where("category", "==", idCategory))
+        const pedidoDb = getDocs(filter)
+
+        pedidoDb
+        .then((result) => {
+          setItems(result.docs.map((doc) => {
+            return doc.data()
+          }))
+        })
+        .catch(()=>{
+          toast.error("Something went wrong")
+        })
+        .finally(() => {
+          setLoading(false);
+        })
+      
+      }
+      
+
+    // pedidoDb
+    //     .then((result)=>{
+    //         const arrayResults = result.docs.map((doc) =>{
+    //           return doc.data()
+    //         })
+    //         setItems(arrayResults)
+    //         setLoading(false)
+
+    //         console.log(arrayResults)
+    //     })
+    //     .catch(()=>{
+    //       toast.error("Something went wrong")
+    //     });
 
     
 
 
-    setLoading(true);
-    getDatos(idCategory)
-    .then((rtaPromise) => {
-      setItems(rtaPromise);
-    })
-    .catch((error) => {
-      console.log(error);
-    })
-    .finally(() => {
-      setLoading(false);
-    });
+    // setLoading(true);
+    // getDatos(idCategory)
+    // .then((rtaPromise) => {
+    //   setItems(rtaPromise);
+    // })
+    // .catch((error) => {
+    //   console.log(error);
+    // })
+    // .finally(() => {
+    //   setLoading(false);
+    // });
 
-    return () => {
-      setItems([]);
-    };
+    // return () => {
+    //   setItems([]);
+    // };
   }, [idCategory]);
 
 

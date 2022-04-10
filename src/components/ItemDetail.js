@@ -20,21 +20,32 @@ const onAdd = (quantity) => {
 
   return (
     <article>
-        <img src={item.imageUrl} alt="" />
+      <div className='itemDetail'>
+        <img className='imgDetail' src={item.imageUrl} alt="" />
         <div>
-            <h2>{item.title}</h2>
+            <h4>{item.title}</h4>
             <h5>{item.author}</h5>
             <Rate allowHalf count={5} value ={item.rating?.rate}/>
-            <p>{item.price}</p>
+            <span>Reviews : {item.rating?.count}</span>
+            <p>£ {item.price}</p>
+            </div>
+            <div>
             {quantity === 0 ? (
               <ItemCount stock={item.stock} onAdd={onAdd} />
             ) : (
               <Link to="/cart">See the basket</Link>
             )}
+            
         </div>
-        <div>
-            <h6>Description</h6>
+        </div>
+        <div className='itemDescription'>
+          
+            <h6>Synopsis</h6>
+            <br />
+            
+            
             <p>{item.description}</p>
+            
         </div>
         
 

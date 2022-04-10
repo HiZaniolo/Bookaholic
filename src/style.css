@@ -14,26 +14,34 @@ html , body, #root {
 }
 
 .layout-nav {
-    background-color: #c3c6b1;
+    background-color: #293241;
 }
 
 .nav__title {
     font-size: 2rem;
-    color: black;
+    color: #f4f4f4;
     font-family: 'Share Tech Mono', monospace;
     text-decoration: none;
+}
+
+.nav__title:hover{
+    color: #f4f4f4;
+    text-decoration: underline;
+    
 }
 
 .nav__link {
     margin-right: 10px;
     margin-left: 10px;
-    color: #4b553a;
+    color: #f4f4f4;
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
 }
 
 .nav__link:hover{
-    color: black;
+    color: #f4f4f4;
+    border: 1px solid #f4f4f4;
+    
 }
 
 main {
@@ -44,18 +52,32 @@ main {
 
 footer {
     padding: 0.6rem;
-    background-color: #c3c6b1;
+    background-color: #3d5a80;
     font-family: "Montserrat", sans-serif;
     font-weight: 0.8rem;
-    color: #4b553a;
+    color: #f4f4f4;
     text-align: center;
+}
+
+.quantityCount{
+    display: flex;
+    justify-content: space-around;
 }
 
 .card_btn {
     margin: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    
     
 }
 
+.card_btn1 {
+    margin: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -91,5 +113,31 @@ footer {
     margin: 0 auto;
     justify-content: center;
 }
+
+.imgDetail {
+    width: 150px
+}
+
+.itemDetail {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+    border-radius: 2px;
+    border: 0.5px solid #3d5a80;
+    padding: 10px;
+}
+
+
+.itemDescription {
+    display: flexwrap;
+    
+    justify-content: center;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 5px;   
+    border-radius: 5px;
+    padding: 10px;
+}
+
 
 

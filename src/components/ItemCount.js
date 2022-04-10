@@ -29,19 +29,18 @@ const ItemCount = ({onAdd}) => {
 
 
   return (
-    <div className='Card'>
-        <Card style={{ width: '16rem' }}>
-            <Card.Img variant="top" src="" />
-            <Card.Body>
-                <Card.Title className='text-center' >Plant</Card.Title>
-                <p>Cantidad: {number}</p>
-                <Button onClick={substract} variant="danger" className='card_btn'>-</Button>
-                <Button onClick={add} variant="success" className='card_btn' >+</Button>
+    <div className='count'>
+        
+                
+                <h4 className='quantityCount'>{number}</h4>
+                
+                <button onClick={substract} className='card_btn'>-</button>
+                <button onClick={add} className='card_btn' >+</button>
                 <div>
-                <Button onClick={handleAdd} disabled={number === 0} className='card_btn1' >Add to basket</Button>
+                <button onClick={handleAdd} disabled={number === 0} className='card_btn1' >Add to basket</button>
                 </div>
-            </Card.Body>
-        </Card>
+            
+        
     </div>
   )
 }
