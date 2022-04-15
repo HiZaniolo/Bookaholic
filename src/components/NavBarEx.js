@@ -20,6 +20,7 @@ const NavBarEx = () => {
         <Nav className="navbar-nav m-auto my-2 mb-lg-0">
           <Link to="/category/englishBooks" className='nav__link'>English Books</Link>
           <Link to="/category/spanishBooks" className='nav__link'>Spanish Books</Link>
+          <Link to="/form" className='nav__link'>Contact Us</Link>
           <Link to="/cart" className='nav__link' ><CartWidget/>{itemsTotalCalculate()}</Link>
         </Nav>
         </Navbar.Collapse>

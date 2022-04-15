@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
 
 import ItemListContainer from "./ItemListContainer";
 import ItemDetailContainer from "./ItemDetailContainer"
@@ -7,6 +7,8 @@ import { Route, Routes } from 'react-router-dom';
 import CartWidget from './CartWidget';
 import Cart from './Cart';
 import { MyContext } from '../context/CartContext';
+import FormContact from './FormContact';
+
 
 
 const Main = () => {
@@ -17,6 +19,7 @@ const Main = () => {
         <Route path='/category/:idCategory' element={<ItemListContainer />} />
         <Route path='/detail/:id' element={<ItemDetailContainer />} />
         <Route path='/cart' element={<Cart/>} />
+        <Route path='/form' element={<FormContact/>} />
         </ Routes> 
     </Container>
   );

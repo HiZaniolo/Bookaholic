@@ -7,9 +7,30 @@ import { toast } from 'react-toastify';
 import products from '../data/products';
 
 
+
 const ShoppingBasket = () => {
     
     const { cart, removeItem, clear, totalCalculate } = useContext(MyContext);
+
+    // const options = {
+    //     animationData: Bag,
+    //     autoplay: true,
+    //     loop: true,
+    //     style: {
+    //         width: '500px'
+    //     }
+    // };
+
+    if(cart.length === 0){
+        return (
+        <div>
+            
+            <h2>Your cart is empty</h2>
+            <button><Link to='/'>Home</Link></button>
+        </div>
+        );
+      }
+    
 
     const confirmPurchase = () => {
         
@@ -26,7 +47,6 @@ const ShoppingBasket = () => {
         
         purchase
           .then(result => {
-              console.log(result)
               toast.success("Order confirmed! " +
                 
              "Order number: " + result.id)
@@ -36,7 +56,9 @@ const ShoppingBasket = () => {
               toast.error("Something went wrong")
           })
 
-    }
+        }
+
+    
       
 
     return (
@@ -51,22 +73,23 @@ const ShoppingBasket = () => {
                     
                     <h3>Title: {product.title}</h3>
                     <h4>Quantity: {product.quantity}</h4>
-                    <h4>$ {product.price}</h4>
+                    <h4>£ {product.price}</h4>
+                    
                 </div>
                 <div>
-                    <h3>Your order</h3>
-                    <h4>{product.quantity}</h4>
                     <h4>Sub total: $ {product.price * product.quantity}</h4>
+                    
                     <button onClick={() => removeItem(product.id)}>Remove</button>
                 </div>
-                <div>
+                </div>
+        ))}
                     <h2>Total : ${totalCalculate()}</h2>
                     <button onClick={clear}>Clean basket</button>
                     <button onClick={confirmPurchase}>Confirm my purchase</button>
-                </div>
-            </div>    
-        ))}
     </div>
+              
+        
+    
     </>
     );
 };
