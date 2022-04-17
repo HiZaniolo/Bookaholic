@@ -83,7 +83,10 @@ function FormContact() {
             icon: "success",
             button: "OK",
             timer: 3000
-        });  
+            
+        }); 
+        setForm( { } ) 
+         
         
     }
 
@@ -92,16 +95,11 @@ function FormContact() {
     
 
     return (
-        <div className='FormContact'>
-            <form
-            style={{
-                marginBottom: '30 px',
-                display: 'flex',
-                flexDirection: 'column',
-                width: '40%',
-            }}
-         >
+        <div className='formContact'>
+            <form>
+         
              <input
+             className='input'
              value={form.name}
              name='name' 
              type="text"
@@ -109,13 +107,16 @@ function FormContact() {
              onChange={handleChange} 
              />   
              <input 
+             className='input'
              value={form.email}
              name='email'
              type="text"
              placeholder='Email'
              onChange={handleChange}
              />
-             <input
+             
+             <input         
+             className='inputMessage'  
              value={form.message}
              name='message'
              type="text"
@@ -127,20 +128,10 @@ function FormContact() {
             </form>
             
             <br />
-            <button onClick={()=>showConfirmation()}>Submit</button>
+            <button onClick={()=>showConfirmation()} className='btnSubmit'>Submit</button>
         </div>
             );
 }
 
 
-
-export default FormContact
-
-//   <div>
-//             {form !== 0 ? (
-//               <ItemCount stock={item.stock} onAdd={onAdd} />
-//             ) : (
-//               <Link to="/cart">See the basket</Link>
-//             )}
-            
-//         </div>
+export default FormContact;

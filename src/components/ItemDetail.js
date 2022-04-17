@@ -33,7 +33,7 @@ const onAdd = (quantity) => {
             {quantity === 0 ? (
               <ItemCount stock={item.stock} onAdd={onAdd} />
             ) : (
-              <Link to="/cart">See the basket</Link>
+              <Link to="/cart" className='linkToCart'>See the basket</Link>
             )}
             
         </div>

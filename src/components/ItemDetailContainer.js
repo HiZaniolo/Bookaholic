@@ -2,21 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
 
-import products from '../data/products';
 import ItemDetail from './ItemDetail';
 import { dataBase } from '../firebase';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { toast } from 'react-toastify';
 
-
-// const getDatos = (id) => {
-//   return new Promise((resolve, reject) => {
-//     const item = products.find((prod) => prod.id === parseInt(id));
-//     setTimeout(() => {
-//       resolve(item);
-//     }, 1500);
-//   });
-// };
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
@@ -42,22 +32,6 @@ const ItemDetailContainer = () => {
           setLoading(false);
         })
 
-
-    // setLoading(true);
-    // getDatos(id)
-    // .then((rtaPromise) => {
-    //   setItem(rtaPromise);
-    // })
-    // .catch((error) => {
-    //   console.log(error);
-    // })
-    // .finally(() => {
-    //   setLoading(false);
-    // });
-
-    // return () => {
-    //   setItem({});
-    // };
   }, [id]);
 
   return (

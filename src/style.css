@@ -14,48 +14,53 @@ html , body, #root {
 }
 
 .layout-nav {
-    background-color: #293241;
+    background-color: #c0c0c0;
+    height: 80px;
 }
 
 .nav__title {
     font-size: 2rem;
-    color: #f4f4f4;
-    font-family: 'Share Tech Mono', monospace;
+    color: black;
+    font-family: 'VT323', monospace;
     text-decoration: none;
 }
 
 .nav__title:hover{
-    color: #f4f4f4;
-    text-decoration: underline;
+    color: black;
+    color: #696969;
+    font-size: 2.5rem;
+    
     
 }
 
 .nav__link {
-    margin-right: 10px;
-    margin-left: 10px;
-    color: #f4f4f4;
-    font-family: "Montserrat", sans-serif;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: black;
+    font-family: 'VT323', monospace;
     text-decoration: none;
+    font-size: 18px;
 }
 
 .nav__link:hover{
-    color: #f4f4f4;
-    border: 1px solid #f4f4f4;
+    color: #696969;
+    font-size: 20px;
+    
     
 }
 
 main {
     flex-grow: 1;
     padding: 1rem;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 footer {
     padding: 0.6rem;
-    background-color: #3d5a80;
-    font-family: "Montserrat", sans-serif;
+    background-color: #a9a9a9;
+    font-family: 'VT323', monospace;
     font-weight: 0.8rem;
-    color: #f4f4f4;
+    color: black;
     text-align: center;
 }
 
@@ -66,32 +71,66 @@ footer {
 
 .card_btn {
     margin: 10px;
-    padding: 15px;
-    border-radius: 20px;
-    
+    padding: 20px;
+    border: 1px solid #7c8594;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.1);
+    color: black;
+    font-size: 18px;
+  
+}
+
+.card_btn:hover{
+    background-color: white;
+    color: #7c8594;
+    font-size: 20px;
     
 }
 
 .card_btn1 {
-    margin: 0px;
-    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 10px;
+    background-color: #3C6362;
+    color: white;
+}
+
+.card_btn1:hover{
+    background-color: #568786;
+    color: white;  
+}
+
+.linkToCart{
+   padding: 20px;
+    border-radius: 10px;
+    background-color: #3C6362;
+    color: white;
+    text-decoration: none;
+}
+.linkToCart:hover{
+    background-color: #568786;
+    color: white; 
+    text-decoration: none;
     
 }
+
+
 .products {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 0.8fr));
+    grid-gap: 0.5rem;
+    font-family: 'Lato', sans-serif;
 }
 .cardProducts {
     width: 11rem;
     height:30rem;
     padding: 0.5rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     align-items: center;
     background-color: #ffffff;
-    /* border-radius: 3px;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.3); */
     transition: all 0.4 ease;
     cursor: pointer;
     object-fit: cover;
@@ -108,6 +147,20 @@ footer {
     box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.1);
 }
 
+.linkCard{
+    text-decoration: none;
+    padding: 8px;
+    border: 1px solid #708090;
+    border-radius: 4px;
+    background-color: #708090;
+    color: #f4f4f4;
+}
+
+.linkCard:hover{
+    background-color: #f4f4f4;
+    color: #708090;
+}
+
 .spinner {
     display: flex;
     margin: 0 auto;
@@ -115,15 +168,14 @@ footer {
 }
 
 .imgDetail {
-    width: 150px
+    width: 250px
 }
 
 .itemDetail {
     display: flex;
     justify-content: space-around;
     margin: 30px;
-    border-radius: 2px;
-    border: 0.5px solid #3d5a80;
+    
     padding: 10px;
 }
 
@@ -139,5 +191,155 @@ footer {
     padding: 10px;
 }
 
+.cartDetail {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+    border-radius: 2px;
+    border: 0.5px solid #3d5a80;
+    padding: 10px;
+}
+.cartImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50px;
+}
+
+.cartDescription {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: flex-end;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 5px;   
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.total {
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+}
+
+.total h3{
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+}
+.btnCart{
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #7c8594;
+    color: #f4f4f4;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+.btnCart:hover{
+    background-color: #f4f4f4;
+    color: #7c8594;
+    
+    
+}
+.btnCart1{
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #7c8594;
+    color: #f4f4f4;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    
+}
+
+.btnCart1:hover{
+    background-color: #f4f4f4;
+    color: #7c8594;
+    text-decoration: none;
+    
+}
 
 
+.btnRemove {
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #cdcdcd;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+}
+.btnRemove:hover{
+    background-color: #f4f4f4;
+    color: #7c8594;
+    text-decoration: none;
+}
+
+.ckeckoutLink{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+     border-radius: 10px;
+     background-color: #3C6362;
+     color: white;
+     text-decoration: none;
+ }
+
+ .ckeckoutLink:hover{
+     background-color: #568786;
+     color: white; 
+     text-decoration: none;
+ }
+
+ .formContact {
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 50px;
+    width: 40px;
+    border-radius: 5px;
+   
+    
+    color: black;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+ }
+
+ .input {
+    margin-left: 350px;
+    margin-top: 10px;
+    width: 500px;
+
+ }
+ .inputMessage {
+    margin-left: 350px;
+    margin-top: 10px;
+    width: 500px;
+    height: 100px;
+ }
+
+ .btnSubmit{
+    margin-left: 350px;
+    margin-top: 10px;
+    
+    border-radius: 5px;
+    width: 500px;
+    background-color: #7c8594;
+    color: #f4f4f4;
+    font-family: 'Lato', sans-serif;
+     
+ }

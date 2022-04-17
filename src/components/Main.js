@@ -8,6 +8,7 @@ import CartWidget from './CartWidget';
 import Cart from './Cart';
 import { MyContext } from '../context/CartContext';
 import FormContact from './FormContact';
+import Checkout from './Checkout';
 
 
 
@@ -20,6 +21,7 @@ const Main = () => {
         <Route path='/detail/:id' element={<ItemDetailContainer />} />
         <Route path='/cart' element={<Cart/>} />
         <Route path='/form' element={<FormContact/>} />
+        <Route path='/checkout' element={<Checkout/>} />
         </ Routes> 
     </Container>
   );
