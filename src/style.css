@@ -30,7 +30,6 @@ html , body, #root {
     color: #696969;
     font-size: 2.5rem;
     
-    
 }
 
 .nav__link {
@@ -45,8 +44,6 @@ html , body, #root {
 .nav__link:hover{
     color: #696969;
     font-size: 20px;
-    
-    
 }
 
 main {
@@ -103,6 +100,14 @@ footer {
     color: white;  
 }
 
+.linkBtn{
+    position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+
+
 .linkToCart{
    padding: 20px;
     border-radius: 10px;
@@ -149,7 +154,7 @@ footer {
 
 .linkCard{
     text-decoration: none;
-    padding: 8px;
+    padding: 0.5rem 1rem;
     border: 1px solid #708090;
     border-radius: 4px;
     background-color: #708090;

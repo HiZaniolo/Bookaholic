@@ -57,6 +57,7 @@ const itemsTotalCalculate = () => {
     return itemsTotal;
 };
 
+
 return (
 <MyContext.Provider
     value ={{

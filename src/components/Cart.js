@@ -68,7 +68,7 @@ const ShoppingBasket = () => {
         <div className='total'>
                     <h3>Total : ${totalCalculate()}</h3>
                     <button onClick={clear} className='btnCart'>Clean basket</button>
-                    <button className='btnCart1'><Link to="/checkout" className='btnCart1'>Confirm order</Link></button>
+                    <button onClick={clear} className='btnCart1'><Link to="/checkout" className='btnCart1'>Confirm order</Link></button>
     </div>
               
         
