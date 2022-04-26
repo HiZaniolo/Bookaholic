@@ -58,7 +58,7 @@ const ShoppingBasket = () => {
                     
                 </div>
                 <div>
-                    <h4>Sub total: $ {product.price * product.quantity}</h4>
+                    <h4>Sub total: £ {product.price * product.quantity}</h4>
                     
                     <button onClick={() => removeItem(product.id)} className='btnRemove' >Remove</button>
                 </div>
@@ -66,7 +66,7 @@ const ShoppingBasket = () => {
         ))}
         </div>
         <div className='total'>
-                    <h3>Total : ${totalCalculate()}</h3>
+                    <h3>Total : £{totalCalculate()}</h3>
                     <button onClick={clear} className='btnCart'>Clean basket</button>
                     <button onClick={clear} className='btnCart1'><Link to="/checkout" className='btnCart1'>Confirm order</Link></button>
     </div>
